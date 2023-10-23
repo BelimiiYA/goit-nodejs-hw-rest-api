@@ -1,19 +1,33 @@
-// const fs = require('fs/promises')
+import Contact from "./schemas/contact.js";
 
-const listContacts = async () => {}
+const listContacts = async () => {
+  return Contact.find();
+};
+const getContactById = (contactId) => {
+  return Contact.findOne({ _id: contactId });
+};
 
-const getContactById = async (contactId) => {}
+const removeContact = (contactId) => {
+  return Contact.findByIdAndRemove({ _id: contactId });
+};
 
-const removeContact = async (contactId) => {}
+const addContact = ({ name, email, phone }) => {
+  return Contact.create({ name, email, phone });
+};
 
-const addContact = async (body) => {}
+const updateContact = (contactId, fields) => {
+  return Contact.findByIdAndUpdate({ _id: contactId }, fields, { new: true });
+};
 
-const updateContact = async (contactId, body) => {}
+const updateContactStatus = (contactId, body) => {
+  return Contact.findByIdAndUpdate(contactId, body);
+};
 
-module.exports = {
+export {
   listContacts,
   getContactById,
   removeContact,
   addContact,
   updateContact,
-}
+  updateContactStatus,
+};
