@@ -32,6 +32,9 @@ const userSchema = new Schema(
 
 userSchema.post("save", handleSaveError);
 
+// contactSchema.pre("findOneAndUpdate", runUpdateValidation);
+// contactSchema.post("findOneAndUpdate", handleSaveError);
+
 export const User = model("user", userSchema);
 
 export const userRegisterSchema = Joi.object({

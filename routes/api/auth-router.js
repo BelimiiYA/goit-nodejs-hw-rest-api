@@ -2,12 +2,12 @@ import express from "express";
 
 import authController from "../../controllers/auth-controller.js";
 
-import validateUserRegister from "../../middlewares/validateUserRegister.js";
-import validateUserLogin from "../../middlewares/validateUserLogin.js";
-import validateUserUpdate from "../../middlewares/validateUserUpdate.js";
+import validateUserRegister from "../../middleware/validateUserRegister.js";
+import validateUserLogin from "../../middleware/validateUserLogin.js";
+import validateUserUpdate from "../../middleware/validateUserUpdate.js";
 
-import authentificate from "../../middlewares/authentificate.js";
-import upload from "../../middlewares/upload.js";
+import authentificate from "../../middleware/authentificate.js";
+import upload from "../../middleware/upload.js";
 
 const authRouter = express.Router();
 

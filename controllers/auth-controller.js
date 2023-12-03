@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs/promises";
+import Jimp from "jimp";
 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -19,6 +20,7 @@ const register = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
 
+  // const { path: tempPath, filename } = req.file;
   const tempPath = req.file?.path;
   const filename = req.file?.filename;
 

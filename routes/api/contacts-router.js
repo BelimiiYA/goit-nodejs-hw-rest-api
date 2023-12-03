@@ -1,10 +1,10 @@
 import express from "express";
 
-import authentificate from "../../middlewares/authentificate.js";
+import authentificate from "../../middleware/authentificate.js";
 
-import validateContactId from "../../middlewares/validateContactId.js";
-import validateContactAdd from "../../middlewares/validateContactAdd.js";
-import validateContactPatch from "../../middlewares/validateContactPatch.js";
+import validateContactId from "../../middleware/validateContactId.js";
+import validateContactAdd from "../../middleware/validateContactAdd.js";
+import validateContactPatch from "../../middleware/validateContactPatch.js";
 
 import contactsController from "../../controllers/contacts-controller.js";
 
