@@ -1,5 +1,5 @@
 import validateBody from "../decorators/validateBody.js";
-import { contactAddSchema } from "../models/Contact.js";
+import { contactAddSchema } from "../models/Сontact.js";
 
 const validateContactAdd = validateBody(contactAddSchema);
 

@@ -1,6 +1,6 @@
 import HttpError from "../helpers/HttpError.js";
 import ctrlWrapper from "../decorators/ctrlWrapper.js";
-import { Contact } from "../models/Contact.js";
+import { Contact } from "../models/Сontact.js";
 
 const getAll = async (req, res) => {
   const { _id: owner } = req.user;
